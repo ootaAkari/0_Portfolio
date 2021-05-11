@@ -1,0 +1,236 @@
+
+// works作品ページ共通
+.work {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    overflow-y: scroll;
+    padding: 65px $pd-mb 50px;
+    background: rgba(49, 129, 142, 0.9);
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    // PC
+    @include screen-pc {
+        left: 0;
+        width: 100%;
+    }
+    
+    
+    //閉じるボタン
+    &__closes {
+        position: absolute;
+        top: $pd-mb;
+        right: $pd-mb;
+        width: 30px;
+        height: 30px;
+        background: url(../src/images/works/close.svg) center center no-repeat;
+        //PC
+        @include screen-pc {
+            position: fixed;
+            top: $pd-mb ;
+            right: $pd-mb + 20px;
+        }
+    }
+    &__wrap {
+        // PC
+        @include screen-pc {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 70%;
+        }
+    }
+    &__container {
+        @include screen-pc {
+            width: 49%;
+            height: auto;
+        }
+        @include screen-pcmax{
+            width: 44%;
+        }
+    }
+    // 白背景・余白
+    &__inner {
+        padding: 45px 25px 50px;
+        border-radius: 30px;
+        background: $c-white;
+        //Tab
+        @include screen-tab {
+        padding: 55px 35px 60px;    
+        }
+        //PC
+        @include screen-pc {
+           position: fixed;
+           padding: 3% 35px 3%;
+
+           width: calc((100% - 370px) *0.49);
+           min-width: 480px;
+        }
+        @include screen-pcmax{
+            width: calc((100% - 370px) *0.44);
+        }
+    }
+    // 作品画像
+    &__pic {
+        margin-bottom: 30px;
+        width: 100%;
+        @include screen-pc {
+            display: none;
+        }
+    }
+    &__img {
+        width: 100%;
+    }
+    // タイトル
+    &__ttlarea {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        
+        //Tab
+        @include screen-tab {
+            margin-bottom: 35px;
+        }
+            //PC
+            @include screen-pc {
+                margin-bottom: 40px;
+        }
+    }
+    // カテゴリ (webサイトなど)
+    &__tag {
+        padding: 2px 6px;
+         @include f-base(1.2rem, .1rem);
+         border: 1px solid $c-blue2;
+    }
+   //h1タイトル
+   &__ttl {
+       padding-right: 20px;
+        @include f-base(2rem);
+        color: $c-black;
+        //PC
+        @include screen-pc {
+           font-size: 2.8rem;
+           letter-spacing: 0.3rem;
+        }
+   }
+   
+   //ジャンル・ツールリスト
+   &__list {
+       display: flex;
+       flex-wrap: wrap;
+       width: 260px;
+       @include f-base(1.2rem, 0.15rem);
+       //PC
+       @include screen-pc {
+        width: 70%;
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem;
+    }
+   }
+   &__item {
+       padding-bottom: 3px;
+       width: 40%;
+       //Tab {
+        @include screen-tab {
+            padding-bottom: 5px;
+        }
+   }
+   &__info {
+       width: 60%;
+   }
+   //説明本文
+   &__txt {
+       padding: 20px 0 40px;
+       @include f-txt;
+       //Tab {
+       @include screen-tab {
+        padding: 25px 0 50px;
+       }
+       //PC
+       @include screen-pc {
+        padding: 25px 0 60px;  
+           @include f-txt-pc;
+       }
+   }
+   &__btn {
+       margin: 0 auto;
+       width: 40%;
+       @include f-base(1.7rem);
+
+   }
+   &__btnlink {
+       position: relative;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 5px 0;
+       background: $c-blue2;
+       border: 1px solid $c-blue2;
+       border-radius: 7px;
+       text-decoration: none;
+       color: $c-white;
+       transition: $wk-ts;
+       &:hover {
+          @include hover-btn;
+          line-height: 1.8;
+       }
+   }
+//    PCのみ表示
+   &__view {
+       display: none;
+      
+       //PC
+       @include screen-pc {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           width: 39%;
+           
+       }
+       @include screen-pcmax{
+           width: 40%;
+       }
+   }
+   &__pc {
+       @include screen-pc {
+        margin-bottom: 50px;
+        width: 100%;
+        
+       }
+       @include screen-pcmax{
+        width: 64%;
+        
+    }
+       &img {
+           width: 100%;
+       }
+   }
+   &__mb {
+    @include screen-pcmax{
+        width: 33%;
+        
+    }
+       &img {
+           width: 100%;
+       }
+   }
+}
+
+// レスポンシブ非対応作品のみ
+//    .work__viewの中の.work__pcに適応
+.pc-only {
+    @include screen-pcmax{
+        width: 100%;
+    }
+}
+
+.responsive {
+    @include screen-pcmax{
+        width: 44%;
+    }
+}

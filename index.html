@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Akari Ohta Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="dist/style.css?202105111800" rel="stylesheet" media="all">
+</head>
+
+<body>
+  <div id="wrapper" class="wrapper">
+    <div class="opening">
+      <div class="opening__wrap">
+        <div class="opening__items">
+          <div class="opening__line"></div>
+          <div class="opening__point"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header id="header" class="header">
+      <div id="logo" class="header__logo op-logo">
+        <a href="#" class="header__link">
+          <div class="header__logoC1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130" fill="#72becb">
+              <circle cx="65" cy="65" r="65" />
+            </svg>
+          </div>
+          <div class="header__logoC2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 105" fill="#173E44">
+              <circle cx="52.5" cy="52.5" r="52.5" />
+            </svg>
+          </div>
+          <div class="header__logoC3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 105" fill="#31818E">
+              <circle cx="52.5" cy="52.5" r="52.5" />
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div id="header__wrap" class="header__wrap">
+        <nav id="gnav" class="gnav">
+          <ul class="gnav__nav">
+            <li class="gnav__list"><a href="#abouts" class="gnav__link">About</a></li>
+            <li class="gnav__list"><a href="#works" class="gnav__link">Works</a></li>
+            <li class="gnav__list"><a href="#contact" class="gnav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="btn" class="btn">
+        <span id="btn__top" class="btn__top"></span>
+        <span id="btn__bottom" class="btn__bottom"></span>
+      </div>
+    </header>
+    <main id="main" class="main">
+      <!-- Top -->
+      <div id="top" class="top">
+        <div class="top__ttlarea">
+          <h1 class="top__ttl">Akari ohta</h1>
+          <p class="top__small">Portfolio Site</p>
+        </div>
+      </div>
+      <!-- About&Skill/Motto -->
+      <section id="abouts" class="abouts bg-b">
+        <div id="about" class="about">
+          <h2 class="about__ttl e-ttl">About</h2>
+          <div class="about__wrap">
+            <div class="about__txtarea e-item">
+              <p class="about__name">太田 亜香莉<span class="about__small">Akari Ohta</span></p>
+              <p class="about__prof">
+                北海道常呂郡訓子府町出身。25歳。<br>
+                岐阜県で陶磁器製造・札幌で経理事務職を経験。<br>
+                ご縁があり、札幌のWebデザイン会社で１ヶ月間コーダーのアルバイトをさせてもらったことがきっかけでWeb制作に興味を持ちました。<br>
+                2020年11月から札幌の職業訓練校「WSS(ウェブスタディサッポロ)」でWeb制作のスキルを学び、コーダー志望で就職活動中です。
+              </p>
+              <p class="about__git"><a href="https://github.com/ootaAkari" class="about__gitlink"
+                  target="_blank">GitHubでコードを見る</a></p>
+            </div>
+            <div class="about__pic e-item"><img src="src/images/index/about.jpg" alt="me" class="about__img"></div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="skill e-item">
+            <p class="skill__ttl">Skill</p>
+            <p class="skill__txt">HTML5 / CSS3 / javaScript,jQuery /
+              WordPress / Adobe Photoshop / Adobe XD / Adobe Illustrator / githubを使用したバージョン管理 /
+              npm-script,webpack,Babelを使用した開発環境構築、トランスパイル
+            </p>
+          </div>
+          <div class="motto e-item">
+            <p class="motto__ttl">Motto</p>
+            <p class="motto__txt">自分の知らないことでも「とにかくやってみる」ことです。新しいことにチャレンジする気持ちを持ち続け、
+              日々変化していくWeb業界の中で活かしたいと思っています。</p>
+          </div>
+        </div>
+      </section>
+      <!-- Works -->
+      <section id="works" class="works">
+        <h2 class="works__ttl e-ttl">Works</h2>
+        <div id="modal" class="works__wrap">
+          <!-- Modal01 GroupWork -->
+          <div class="works__container">
+            <div class="works__pic" data-modal="#modal01">
+              <img src="src/images/works/works_groupwork1.jpg" srcset="src/images/works/works_groupwork2.jpg 2x"
+                alt="WSS" class="works__img">
+            </div>
+            <p class="works__caption">Web / ウェブスタディサッポロ</p>
+          </div>
+          <!-- Modal02 Pottery -->
+          <div class="works__container">
+            <div class="works__pic" data-modal="#modal02">
+              <img src="src/images/works/works_pottery1.jpg" srcset="src/images/works/works_pottery2.jpg 2x"
+                alt="Pottery" class="works__img">
+            </div>
+            <p class="works__caption">Web / 仮想陶芸教室</p>
+          </div>
+          <!-- Modal03 interior -->
+          <div class="works__container">
+            <div class="works__pic" data-modal="#modal03">
+              <img src="src/images/works/works_interior1.jpg" srcset="src/images/works/works_interior2.jpg 2x"
+                alt="Interior" class="works__img">
+            </div>
+            <p class="works__caption">Web / 仮想インテリアショップ</p>
+          </div>
+          <!-- Modal04 NextOne -->
+          <div class="works__container">
+            <div class="works__pic" data-modal="#modal04">
+              <img src="src/images/works/works_nextone1.jpg" srcset="src/images/works/works_nextone2.jpg 2x"
+                alt="Nextone" class="works__img">
+            </div>
+            <p class="works__caption">Web / ネクストワンサイト制作</p>
+          </div>
+          <!-- Modal05 PhotoStudio -->
+          <div class="works__container">
+            <div class="works__pic" data-modal="#modal05">
+              <img src="src/images/works/works_wp01_1.jpg" srcset="src/images/works/works_wp01_2.jpg 2x"
+                alt="Wordpress01" class="works__img">
+            </div>
+            <p class="works__caption">Web / 仮想フォトスタジオ</p>
+          </div>
+          <!-- Modal06 Banner -->
+          <div class="works__container">
+            <div class="works__pic" data-modal="#modal06">
+              <img src="src/images/works/works_banner_bl1.jpg" srcset="src/images/works/works_banner_bl2.jpg 2x" alt="banner" class= "works__img">
+            </div>
+            <p class="works__caption">banner / webバナー制作</p>
+          </div>
+        </div>
+        <!-- Modal01 GroupWork-->
+        <div id="modal01" class="work">
+          <div class="work__closes">
+          </div>
+          <div class="work__wrap">
+            <div class="work__pic"><img src="src/images/works/works_groupwork1.jpg"
+                srcset="src/images/works/works_groupwork2.jpg 2x" alt="WSSMb" class="work__img"></div>
+            <div class="work__container">
+              <div class="work__inner">
+                <div class="work__ttlarea">
+                  <h3 class="work__ttl">職業訓練校WSS</h3>
+                  <p class="work__tag">Webサイト</p>
+                </div>
+                <dl class="work__list">
+                  <dt class="work__item">レスポンシブ</dt>
+                  <dd class="work__info">非対応</dd>
+                  <dt class="work__item">ジャンル</dt>
+                  <dd class="work__info">コーポレートサイト</dd>
+                  <dt class="work__item">デザイン</dt>
+                  <dd class="work__info">XD, Photoshop</dd>
+                  <dt class="work__item">コーディング</dt>
+                  <dd class="work__info">html, scss, jQuery</dd>
+                  <dt class="work__item">製作期間</dt>
+                  <dd class="work__info">2週間</dd>
+                </dl>
+                <p class="work__txt">札幌の職業訓練校WSS(ウェブスタディサッポロ)のサイトをリニューアルするという設定で、入校後３か月目に制作しました。
+                  グループワークの一環で『複数人での作業進行』『コンペ形式での発表』を体験し、主に全体のコーディング担当として制作に関わりました。
+                </p>
+                <div class="work__btn">
+                  <a href="src/works/groupwork/index.html" class="work__btnlink" target="_blank">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="work__view">
+              <div class="work__pc pc-only"><img src="src/images/works/works_groupwork_pc.jpg" alt="GroupWorkPC"
+                  class="work__pcimg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal02 Pottery-->
+        <div id="modal02" class="work">
+          <div class="work__closes">
+          </div>
+          <div class="work__wrap">
+            <div class="work__pic"><img src="src/images/works/works_pottery1.jpg"
+                srcset="src/images/works/works_pottery2.jpg 2x" alt="PotteryMb" class="work__img"></div>
+            <div class="work__container">
+              <div class="work__inner">
+                <div class="work__ttlarea">
+                  <h3 class="work__ttl">陶芸教室ぽたぽた</h3>
+                  <p class="work__tag">Webサイト</p>
+                </div>
+                <dl class="work__list">
+                  <dt class="work__item">レスポンシブ</dt>
+                  <dd class="work__info">非対応</dd>
+                  <dt class="work__item">ジャンル</dt>
+                  <dd class="work__info">ブランディングサイト</dd>
+                  <dt class="work__item">デザイン</dt>
+                  <dd class="work__info">XD, Photoshop, Illustrator</dd>
+                  <dt class="work__item">コーディング</dt>
+                  <dd class="work__info">html, scss, jQuery</dd>
+                  <dt class="work__item">製作期間</dt>
+                  <dd class="work__info">3日間</dd>
+                </dl>
+                <p class="work__txt">『仮想の陶芸教室のブランディングサイト』という設定で、入校4ヶ月目に制作しました。
+                  jqueryのプラグインをファーストビューとギャラリーで使用し、イメージ写真を効果的に魅せることを狙いました。
+                </p>
+                <div class="work__btn">
+                  <a href="src/works/pottery/index.html" class="work__btnlink" target="_blank">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="work__view">
+              <div class="work__pc pc-only"><img src="src/images/works/works_pottery_pc.jpg" alt="PotteryPC"
+                  class="work__pcimg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal03 interior-->
+        <div id="modal03" class="work">
+          <div class="work__closes">
+          </div>
+          <div class="work__wrap">
+            <div class="work__pic"><img src="src/images/works/works_interior1.jpg"
+                srcset="src/images/works/works_interior2.jpg 2x" alt="Interior" class="work__img"></div>
+            <div class="work__container">
+              <div class="work__inner">
+                <div class="work__ttlarea">
+                  <h3 class="work__ttl">インテリアショップ</h3>
+                  <p class="work__tag">Webサイト</p>
+                </div>
+                <dl class="work__list">
+                  <dt class="work__item">レスポンシブ</dt>
+                  <dd class="work__info">対応</dd>
+                  <dt class="work__item">デザイン</dt>
+                  <dd class="work__info">XD, Photoshop</dd>
+                  <dt class="work__item">コーディング</dt>
+                  <dd class="work__info">html, scss, jQuery</dd>
+                  <dt class="work__item">製作期間</dt>
+                  <dd class="work__info">1日</dd>
+                </dl>
+                <p class="work__txt">『仮想のインテリアショップの紹介』という設定で、入校4ヶ月目に制作しました。
+                  初めてレスポンシブ対応のコーディングをし、スマホ・タブレット・PCそれぞれで問題なく閲覧できることを目標に進めました。
+                </p>
+                <div class="work__btn">
+                  <a href="src/works/interior/index.html" class="work__btnlink" target="_blank">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="work__view responsive">
+              <div class="work__pc"><img src="src/images/works/works_interior_pc.jpg" alt="interiorPC"
+                  class="work__pcimg">
+              </div>
+              <div class="work__mb"><img src="src/images/works/works_interior_mb.jpg" alt="interiorMobile"
+                  class="work__mbimg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal04 Nextone-->
+        <div id="modal04" class="work">
+          <div class="work__closes">
+          </div>
+          <div class="work__wrap">
+            <div class="work__pic"><img src="src/images/works/works_nextone1.jpg"
+                srcset="src/images/works/works_nextone2.jpg 2x" alt="Nextone" class="work__img"></div>
+            <div class="work__container">
+              <div class="work__inner">
+                <div class="work__ttlarea">
+                  <h3 class="work__ttl">ネクストワン</h3>
+                  <p class="work__tag">Webサイト</p>
+                </div>
+                <dl class="work__list">
+                  <dt class="work__item">レスポンシブ</dt>
+                  <dd class="work__info">非対応</dd>
+                  <dt class="work__item">ジャンル</dt>
+                  <dd class="work__info">コーポレートサイト</dd>
+                  <dt class="work__item">デザイン</dt>
+                  <dd class="work__info">XD, Photoshop</dd>
+                  <dt class="work__item">コーディング</dt>
+                  <dd class="work__info">html, scss, jQuery</dd>
+                  <dt class="work__item">製作期間</dt>
+                  <dd class="work__info">3日間</dd>
+                </dl>
+                <p class="work__txt">
+                  株式会社ネクストワン札幌支社のサイトをリニューアルするという設定で入校5か月目に制作しました。レスポンシブに対応したコーディングをした上で、デザイン上のレイアウトが整ったサイトになるよう心がけました。
+                </p>
+                <div class="work__btn">
+                  <a href="src/works/nextone/index.html" target="_blank" class="work__btnlink">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="work__view responsive">
+              <div class="work__pc"><img src="src/images/works/works_nextone_pc.jpg" alt="NextonePC"
+                  class="work__pcimg">
+              </div>
+              <div class="work__mb"><img src="src/images/works/works_nextone_mb.png" alt="NextoneMobile"
+                  class="work__mbimg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal05 WordPress01-->
+        <div id="modal05" class="work">
+          <div class="work__closes">
+          </div>
+          <div class="work__wrap">
+            <div class="work__pic"><img src="src/images/works/works_wp01_1.jpg"
+                srcset="src/images/works/works_wp01_2.jpg 2x" alt="Wordpress01" class="work__img"></div>
+            <div class="work__container">
+              <div class="work__inner">
+                <div class="work__ttlarea">
+                  <h3 class="work__ttl">フォトスタジオ</h3>
+                  <p class="work__tag">Webサイト</p>
+                </div>
+                <dl class="work__list">
+                  <dt class="work__item">レスポンシブ</dt>
+                  <dd class="work__info">対応</dd>
+                  <dt class="work__item">ジャンル</dt>
+                  <dd class="work__info">コーポレートサイト</dd>
+                  <dt class="work__item">CMS</dt>
+                  <dd class="work__info">WordPress</dd>
+                  <dt class="work__item">製作期間</dt>
+                  <dd class="work__info">1日</dd>
+                </dl>
+                <p class="work__txt">『仮想のフォトスタジオのサイト』という設定で、WordPressのテンプレート「Lightning」を使用し制作しました。
+                  プラグインの使用・style.cssを操作したカスタマイズをし、子ページの制作も行いました。
+                </p>
+                <div class="work__btn">
+                  <a href="http://a-ohta.com/wp01/" target="_blank" class="work__btnlink">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="work__view responsive">
+              <div class="work__pc"><img src="src/images/works/works_wp01_pc.jpg" alt="NextonePC" class="work__pcimg">
+              </div>
+              <div class="work__mb"><img src="src/images/works/works_wp01_mb.jpg" alt="NextoneMobile"
+                  class="work__mbimg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal06 web banner -->
+        <div id="modal06" class="work">
+          <div class="work__closes">
+          </div>
+          <div class="work__wrap">
+            <div class="work__pic"><img src="src/images/works/works_banner_mb1.jpg"
+                srcset="src/images/works/works_banner_mb2.jpg 2x" alt="banner" class="work__img"></div>
+            <div class="work__container">
+              <div class="work__inner">
+                <div class="work__ttlarea">
+                  <h3 class="work__ttl">Webバナー制作</h3>
+                  <p class="work__tag">Webバナー</p>
+                </div>
+                <dl class="work__list">
+                  <dt class="work__item">デザイン</dt>
+                  <dd class="work__info">XD, Photoshop</dd>
+                  <dt class="work__item">製作期間</dt>
+                  <dd class="work__info">1時間</dd>
+                </dl>
+                <p class="work__txt">Photoshopを使用しWebバナーを制作しました。
+                  ※順に『北海道産の素材を使ったお菓子のバナー』『仮想のりんごの商品を使ったバナー』
+                </p>
+              </div>
+            </div>
+            <div class="work__view">
+              <div class="work__pc pc-only"><img src="src/images/works/works_banner_pc1.jpg" alt="bannerPC"
+                  class="work__pcimg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mail form -->
+      <section id="contact" class="contact bg-b">
+        <div class="contact__wrap"> 
+          <h2 class="contact__ttl e-ttl">Contact</h2>
+          <form class="form e-item"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSclKG0tcR6Sy8rVovx9qqxmKnyKaA2m1a2RxyGoFvSx1az0GA/formResponse"
+            method="post" autocomplete="off" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="form__name">
+              <label for="name" class="form__label">お名前</label>
+              <input type="text" name="entry.1675561314" id="name" class="form__input" placeholder="田中　太郎" required>
+            </div>
+            <div class="form__email">
+              <label for="e-mail" class="form__label">E-mail</label>
+              <input type="email" name="entry.293824314" id="e-mail" class="form__input"
+                placeholder="exsample@gmail.com" required>
+            </div>
+            <div class="form__message">
+              <label for="message" class="form__label">お問い合わせ内容</label>
+              <textarea name="entry.875721795" id="message" class="form__txtarea" placeholder="お問い合わせ内容を入力してください"
+                required></textarea>
+            </div>
+            <div class="form__btn">
+              <input type="submit" value="送信" class="form__submit">
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <div id="smalls" class="smalls">
+        <p class="smalls__address"><span>https://a-ohta.com</span></p>
+        <p class="smalls__copy"><span>copyright©AkariOhta</span></p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Form -->
+  <script>
+    var submitted = false;
+  </script>
+  <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
+    onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+  <script src="dist/main.js"></script>
+</body>
+
+</html>

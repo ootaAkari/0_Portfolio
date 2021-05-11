@@ -1,0 +1,110 @@
+
+//ここからopeningAnimation()関連------------
+// bodyのfixed解除
+.op-static {
+    position: static;
+}
+// .opening全体をゆっくりnoneさせるためのanimation
+.op-none {
+    display: none;
+}
+// header__logoのopacity:0 解除
+.op-logo-op {
+    opacity: 1;
+}
+
+//ここから読み込み時fadeInAnime()関連-------------
+//初期状態
+.e-item {
+    opacity: 0;
+}
+.e-ttl {
+    opacity: 0;
+}
+
+//jsで付与
+.fade-in {
+    animation: fade-in ease-in-out .9s  forwards;
+}
+.fade-in-ttl {
+    animation: fade-in-ttl ease-in-out .9s  forwards;
+}
+.slide-in {
+    animation: slide-in ease-in-out .9s  forwards;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(30px) }
+    100% { opacity: 1; transform: translateY(0) }
+}
+@keyframes fade-in-ttl {
+    0% { opacity: 0; transform: translateY(-30px) }
+    100% { opacity: 1; transform: translateY(0) }
+}
+@keyframes slide-in {
+    0% { opacity: 0; transform: translateY(30px) }
+    100% { opacity: 1; transform: translateY(0) }
+}
+
+//ここからclickModalWindow()関連--------------------
+.fixed-b {
+    position: fixed;
+    width: 100%;
+    z-index:1;
+}
+
+// ここからscrollChangeColor()変更関連-----------------
+ //文字色変更
+.change-c {
+    color: $c-white;
+}
+ //border色変更
+.change-b {
+    border-right: 1px solid $c-white;
+}
+
+// ここからclickHumbergerBtn関連-----------------------
+ //右からスライド
+.btn-slide {
+    transform: translateX(0);
+}
+ //領域外暗く
+.gnv-bg {
+    &::before {
+        opacity: .5;
+        visibility: visible;
+    }
+}
+
+// ハンバーガーボタンanimation
+.btn-top {
+    animation: btn-top .5s forwards;
+}
+.btn-bottom {
+    animation: btn-bottom .5s forwards;
+}
+
+// ボタンラインkeyflame 
+@keyframes btn-top {
+    0% { transform: translateY(-7px) scaleY(.4) }
+    50% { transform: translateY(0) scaleY(.4) }
+    100% { transform: translateY(-3px) scaleY(1)}
+}
+@keyframes btn-bottom {
+    0% { transform: translateY(7px) scaleY(.4); }
+    50% { transform: translateY(0) scaleY(.4); }
+    100% { transform: translateY(3px) scaleY(1);}
+}
+
+// ボタンラインkeyflame 戻る時 (_header.scssに記述)
+@keyframes btn-top-return {
+    0% { transform: translateY(-3px) scaleY(1); }
+    50% { transform: translateY(0) scaleY(.4); }
+    100% { transform: translateY(-7px) scaleY(.4);}
+}
+@keyframes btn-bottom-return {
+    0% { transform: translateY(3px) scaleY(1); }
+    50% { transform: translateY(0) scaleY(.4); }
+    100% {transform: translateY(7px) scaleY(.4);}
+}
+

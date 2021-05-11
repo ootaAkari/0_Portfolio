@@ -1,0 +1,132 @@
+
+.header__logo {
+    opacity: 0;
+}
+.opening {
+    &__wrap {
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+        height: 100vh;
+        background: $c-blue1;
+        //2  背景色透過
+        animation: op-bg-none ease-in-out .05s 1.2s forwards;
+        
+    }
+    // 紐・円
+    &__items {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: $pd-mb*2+$lw-mb;
+        height: 300px;
+        transform: translateY(-50%);
+        transition: .5s;
+        //1  紐・円移動
+        animation: op-light-pull .4s ease-out .7s forwards ;
+        //Tab
+        @include screen-tab {
+            width: $pd-tab*2+$lw-tab;
+            height: 350px;
+        }
+        // PC
+        @include screen-pc {
+            width: 229px;
+            height: 400px;
+        }
+        
+    }
+    // 紐
+    &__line {
+        width: 1px;
+        height: 100%;
+        background: $c-white;
+        //2   紐透過
+        animation: op-line-none .05s 1.2s forwards;
+        
+    }
+     // 円
+    &__point {
+        position: absolute;
+        top: (($h-mb)-($lw-mb))/2;
+        // left: $pd-mb;
+        width: $lw-mb;
+        height: $lw-mb;
+        border-radius: 50%;
+        background: $c-white;
+        transform: translateY(250px) scale(.4);
+        transform-origin: bottom;
+        //2  拡大・移動 .5% = 0.05s
+        animation: op-point-big-mb ease-out 1.5s 1.2s forwards;
+        //Tab
+        @include screen-tab {
+        top: (($h-tab)-($lw-tab))/2;
+        left: $pd-tab;
+        width: $lw-tab;
+        height: $lw-tab;
+        transform:   translateY(290px)  scale(.4);
+        //2  拡大・移動 .5% = 0.05s
+        animation: op-point-big-tab ease-out 1.5s 1.2s forwards;
+        }
+        //PC
+        @include screen-pc {
+            top: (229px -($lw-pc))/2;
+            left: (229px -($lw-pc))/2;
+            width: $lw-pc;
+            height: $lw-pc;
+            transform:   translateY(230px)  scale(.2);
+            //2  拡大・移動 .5% = 0.05s
+            animation: op-point-big-pc ease-out 1.5s 1.2s forwards;
+        }
+    }
+    
+} 
+
+//1  紐・円が下へ移動
+@keyframes op-light-pull {
+    10% { transform: translateY(-40%) }
+    100% { transform: translateY(0)}
+}
+//2  背景色透過
+@keyframes op-bg-none {
+    100% {background: none}
+    
+}
+//2  紐透過
+@keyframes op-line-none {
+    100% { opacity: 0}
+}
+//2  円拡大・移動
+@keyframes op-point-big-mb {
+    .5% { transform: scale(1) translateY(250px); background: #72becb;}
+    20% { transform: scale(1) translateY(250px); background: #72becb;}
+    99% { transform: scale(1) translateY(0); opacity: 0}
+    100% { transform: scale(1) translateY(0);
+           background: #72becb;
+           opacity: 0}
+}
+@keyframes op-point-big-tab {
+    .5% { transform: scale(1) translateY(290px); background: #72becb;}
+    20% { transform: scale(1) translateY(290px); background: #72becb;}
+    99% { transform: scale(1) translateY(0); opacity: 0}
+    100% { transform: scale(1) translateY(0);
+           background: #72becb;
+           opacity: 0}
+}
+@keyframes op-point-big-pc {
+    .5% { transform: scale(1) translateY(230px); background: #72becb;}
+    20% { transform: scale(1) translateY(230px); background: #72becb;}
+    99% { transform: scale(1) translateY(0); opacity: .5}
+    100% { transform: scale(1) translateY(0);
+           background: #72becb;
+           opacity: .5}
+}
+//3  (js).opening全体にopacity:0,display:noneかける
+@keyframes op-none {
+    99% { z-index:1; opacity: 0}
+    100% { display: none}
+}
+
+

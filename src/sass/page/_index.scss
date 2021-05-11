@@ -1,0 +1,502 @@
+//Top Akari Ohta
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px $pd-mb;
+    height: 100vh;
+    background: $c-gray;
+
+    // 下スクロールでheight75px
+    @include screen-pc {
+        padding: 0;
+        margin-left: auto;
+        width: calc(100% - 230px);
+        height: 100vh;
+    }
+
+    &::before {
+
+        // PC
+        @include screen-pc {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 230px;
+            height: 100vh;
+            background: $c-gray;
+        }
+    }
+
+    &__ttlarea {
+        position: absolute;
+    }
+
+    &__ttl {
+        position: relative;
+        margin-bottom: 10px;
+        @include f-top;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            right: 77px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: $c-blue2;
+        }
+
+        // PC
+        @include screen-pc {
+            font-size: 4.5rem;
+
+            &::after {
+                top: 20px;
+                right: 88px;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+
+    &__small {
+        text-align: center;
+        @include f-base(1.4rem);
+
+        // PC
+        @include screen-pc {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// Greeting
+.about {
+    padding: 65px $pd-mb 50px;
+    width: 100%;
+    background: $c-blue1;
+
+    //Tab
+    @include screen-tab {
+        padding: 65px $pd-tab 50px;
+    }
+
+    // PC
+    @include screen-pc {
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        padding: 125px 70px 100px 300px;
+    }
+
+    // タイトル
+    &__ttl {
+        color: $c-white;
+        margin-bottom: 30px;
+        @include f-ttl;
+
+        // PC
+        @include screen-pc {
+            @include f-ttl-pc;
+        }
+    }
+
+    // プロフィール・画像囲み
+    &__wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-color: $c-gray;
+
+        // Tab
+        @include screen-tab {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: 20px auto;
+        }
+    }
+
+    &__txtarea {
+        padding: 45px 25px 50px 25px;
+
+        // Tab 
+        @include screen-tab {
+            width: 50%;
+        }
+
+        // PC
+        @include screen-pc {
+            width: 50%;
+        }
+    }
+
+    // 名前漢字と英字
+    &__name {
+        margin-bottom: 15px;
+        @include f-base;
+
+        // PC
+        @include screen-pc {
+            font-size: 2.8rem;
+        }
+
+    }
+
+    &__small {
+        display: inline-block;
+        padding-left: 10px;
+        @include f-base(1.1rem, 0.1rem);
+
+        // PC
+        @include screen-pc {
+            padding-left: 20px;
+            font-size: 2rem;
+            letter-spacing: 0.2rem;
+        }
+    }
+
+    // 自己紹介本文
+    &__prof {
+        margin-bottom: 15px;
+        @include f-txt;
+        color: $c-black;
+
+        // PC
+        @include screen-pc {
+            margin-bottom: 25px;
+            @include f-txt-pc;
+        }
+    }
+
+    &__git {
+        text-align: center;
+
+        &link {
+            display: inline-block;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid $c-blue2;
+            border-radius: 30px;
+            background: $c-blue2;
+            @include f-txt;
+            text-decoration: none;
+            color: $c-white;
+            transition: $bt-ts;
+
+            &:hover {
+                @include hover-btn;
+            }
+
+            // PC
+            @include screen-pc {
+                margin: 0 auto;
+                width: 90%;
+                @include f-txt-pc;
+            }
+        }
+    }
+
+    // プロフィール画像
+    &__pic {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        // Tab
+        @include screen-tab {
+            width: 50%;
+        }
+
+        // PC
+        @include screen-pc {
+            width: 50%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+// Skill&Motto
+.info {
+    padding: 50px $pd-mb 65px;
+    width: 100%;
+    background: $c-blue2;
+
+    // Tab
+    @include screen-tab {
+        padding: 50px $pd-tab 65px;
+    }
+
+    // PC
+    @include screen-pc {
+        padding: 125px 70px 100px 300px;
+    }
+}
+
+.skill {
+    padding: 25px;
+    margin-bottom: 45px;
+    background: $c-gray;
+
+    &__ttl {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        margin-bottom: 25px;
+        @include f-base(1.8rem, 0.18rem, 400);
+        @include small-circle;
+
+        // PC
+        @include screen-pc {
+            font-size: 25px;
+        }
+    }
+
+    &__txt {
+        @include f-base(1.3rem, 0.1rem, 400);
+
+        // PC
+        @include screen-pc {
+            @include f-txt-pc(1.6rem, 0.25rem);
+        }
+    }
+}
+
+.motto {
+    padding: 25px;
+    background: $c-gray;
+
+    &__ttl {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        margin-bottom: 25px;
+        @include f-base(1.8rem, 0.18rem, 400);
+        @include small-circle;
+
+        // PC
+        @include screen-pc {
+            font-size: 25px;
+        }
+    }
+
+    &__txt {
+        @include f-txt;
+
+        // PC
+        @include screen-pc {
+            @include f-txt-pc;
+        }
+    }
+}
+
+// Works
+.works {
+    padding: 65px $pd-mb 50px;
+    width: 100%;
+    background: $c-gray;
+
+    // Tab
+    @include screen-tab {
+        padding: 65px $pd-tab 50px;
+    }
+
+    // PC
+    @include screen-pc {
+        padding: 125px 70px 100px 300px;
+    }
+
+    &__ttl {
+        margin-bottom: 40px;
+        @include f-ttl;
+
+        // PC
+        @include screen-pc {
+            @include f-ttl-pc;
+        }
+    }
+
+    &__wrap {
+        width: 100%;
+
+        // Tab
+        @include screen-tab {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__container {
+        margin-bottom: 60px;
+        width: 100%;
+        opacity: 0;
+
+        @include screen-tab {
+            margin-bottom: 60px;
+            width: 48%;
+        }
+    }
+
+    &__pic {
+        margin-bottom: 15px;
+        width: 100%;
+        border-radius: 30px;
+        background: #71d3e2;
+        overflow: hidden;
+        cursor: pointer;
+        transition: $wk-ts;
+
+        //タブレットでのチラつき防止
+        &:hover {
+            border-radius: 30px;
+
+            .works__img {
+                border-radius: 30px;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        opacity: .8;
+        transition: $wk-ts;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    &__caption {
+        display: inline-block;
+        color: $c-black;
+        transition: $wk-ts;
+        @include f-base(1.3rem, 0.08rem);
+
+        // PC
+        @include screen-pc {
+            @include f-txt-pc;
+        }
+    }
+}
+
+// コンタクト
+.contact {
+    padding: 65px $pd-mb 50px;
+    background: $c-blue1;
+
+    // Tab
+    @include screen-tab {
+        padding: 65px $pd-tab 50px;
+    }
+
+    //PC    
+    @include screen-pc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0% 70px 0% 300px;
+        width: 100%;
+        height: 100vh;
+    }
+
+    &__wrap {
+        margin: 0 auto;
+        max-width: 500px;
+
+        //Tab 
+        @include screen-tab {
+            width: 80%;
+            max-width: 800px;
+        }
+    }
+
+    &__ttl {
+        margin-bottom: 40px;
+        @include f-ttl;
+        color: $c-white;
+
+        //PC    
+        @include screen-pc {
+            margin-bottom: 60px;
+            @include f-ttl-pc;
+        }
+    }
+}
+
+// フォーム部分
+.form {
+    &__name {
+        margin-bottom: 20px;
+    }
+
+    &__email {
+        margin-bottom: 20px;
+    }
+
+    &__message {
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        display: block;
+        padding-bottom: 10px;
+        @include f-base(1.5rem);
+        color: $c-white;
+        //PC 
+        @include f-base(1.7rem);
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        width: 100%;
+        padding: 15px;
+        background: $c-gray;
+        border: none;
+        border-radius: 7px;
+        letter-spacing: 0.18rem;
+        @include f-base(1.6rem);
+    }
+
+    &__txtarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        margin-bottom: 30px;
+        background: $c-gray;
+        border: none;
+        border-radius: 7px;
+        letter-spacing: 0.12rem;
+        @include f-base(1.7rem);
+
+        //PC
+        @include screen-pc {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__submit {
+        cursor: pointer;
+        -webkit-appearance: none;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid $c-white;
+        border-radius: 7px;
+        background: $c-blue1;
+        letter-spacing: 0.12rem;
+        color: #fff;
+        transition: $bt-ts;
+
+        &:hover {
+            @include hover-btn($c-white, $c-white, $c-blue1);
+        }
+    }
+}

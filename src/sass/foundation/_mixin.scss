@@ -1,0 +1,122 @@
+// @mediaクエリ 
+
+@mixin screen-mb($min-width: 500px) {
+    @media screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+//タブレット
+@mixin screen-tab($min-width: 768px) {
+    @media screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+//PC
+@mixin screen-pc($min-width: 1025px) {
+    @media screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+//作品子ページのみ適応 PC画像mobile画像横並びに変更
+@mixin screen-pcmax($min-width: 1536px) {
+    @media screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+
+// Font
+// Fontbase
+@mixin f-base($size: 1.8rem, $space:0.2rem, $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $space;
+    line-height: 1.8;
+}
+
+// TOPのAkariOhta
+@mixin f-top($size: 3.6rem, $space: 0.6rem) {
+    font-size: $size;
+    font-weight: 300;
+    letter-spacing: $space;
+    line-height: 1.6;
+}
+  
+
+// Gnav
+@mixin f-nav ($size: 2.7rem,$weight: 300) {
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: 0.25rem;
+    line-height: 1.6;
+}
+
+//Section title
+@mixin f-ttl($size: 3rem,$space: 0.3rem) {
+    font-size: $size;
+    font-weight: 300;
+    letter-spacing: $space;
+    line-height: 1.6;
+}
+    //1025px以上
+@mixin f-ttl-pc($size: 4rem,$space: 0.48rem) {
+    font-size: $size;
+    letter-spacing: $space;
+}
+
+//Section txt
+@mixin f-txt($size: 1.3rem,$space: 0.08rem) {
+    font-size: $size;
+    font-weight: 400;
+    letter-spacing: $space;
+    line-height: 2;
+}
+    //1025px以上
+ @mixin f-txt-pc($size: 1.6rem,$space: 0.15rem) {
+    font-size: $size;
+    letter-spacing: $space;
+}
+
+//about__name・work__ttl共通 font-size
+$fz-m: 28px;
+
+
+// display:flex 上下左右真ん中揃え
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Skill&Motto タイトル〇
+@mixin small-circle() {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $c-blue1;
+    }
+}
+
+// hover時opacity
+@mixin hover($oc: .5) {
+    opacity: $oc;
+}
+
+//active時opacity
+@mixin active {
+    opacity: 1;
+}
+
+//hover時ボタン反転(modal内View・Contact送信)
+@mixin hover-btn($bdc: $c-blue2, $bgc: $c-white, $c: $c-blue2) {
+    border: 1px solid $bdc;
+    background-color: $bgc;
+    color: $c;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>お問合せいただきありがとうございます</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="dist/style.css?202105071740" rel="stylesheet" media="all">
+</head>
+
+<body>
+  <div class="thk__wrapper">
+    <div class="thk__txtarea">
+      <p class="thk__txt"> このたびは、お問合せいただき、誠にありがとうございました。<br>
+       お送りいただきました内容を確認の上、折り返しご連絡させていただきます。</p>
+      <p class="thk__btn"><a href="index.html" class="thk__link">TOPへ戻る</a></p>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <script>
+    var submitted = false;
+  </script>
+  <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
+    onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+  <script src="dist/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+// Font base
+$font-En: 'Open Sans';
+$font-Ja: a-otf-gothic-bbb-pr6n;
+
+// Color
+// 文字色
+$c-black: #141414;
+$c-white: #fff;
+
+$c-gray: #F9F9F9;
+$c-deep: #f1f1f1;
+$c-blue1: #31818e;
+$c-blue2: #2A9AAC;
+$c-blgray: #e8f1f1;
+
+// FontSize, family, color設定
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+}
+
+body {
+  position: fixed;
+  font-family: $font-En, $font-Ja, sans-serif;
+  color: $c-black;
+}
+
+
+// コンテンツのpapdding左右
+// Mobile
+$pd-mb: 20px;
+// Tab
+$pd-tab: 30px;
+
+
+// ヘッダーheightとロゴwidth 
+// (ロゴにposition:fixedかけたため固定値で配置)
+// Mobile
+$h-mb: 65px;
+$lw-mb: 50px;
+// Tab
+$h-tab: 100px;
+$lw-tab: 70px;
+// PC (logoのみ)
+$lw-pc: 120px;
+
+
+// UI・js関連
+$hd-ts: all .3s ease-in-out;
+
+// scrollChangeColor,ナビゲーションhover時
+$sl-ts: all .2s ease-out;
+
+// Worksサムネイルhover時
+$wk-ts: all .5s ease-out;
+// Worksモーダル内Viewボタン、Contact送信ボタンhover時
+$bt-ts: all .2s ease-out;

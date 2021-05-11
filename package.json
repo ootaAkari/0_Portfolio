@@ -1,0 +1,38 @@
+{
+  "name": "portfolio_01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ootaAkari/Portfolio_01.git"
+  },
+  "author": "oota Akari",
+  "license": "ISC",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/ootaAkari/Portfolio_01/issues"
+  },
+  "homepage": "https://github.com/ootaAkari/Portfolio_01#readme",
+  "dependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    "mini-css-extract-plugin": "^1.6.0"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "jquery": "^3.6.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.36.0",
+    "webpack-cli": "^4.6.0"
+  }
+}

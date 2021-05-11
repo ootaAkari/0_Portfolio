@@ -1,0 +1,44 @@
+.thk {
+    &__wrapper {
+        width: 100vw;
+        height: 100vh;
+        background: $c-blue1;
+    }
+    &__txtarea {
+        padding: 80px 40px 0;
+        color: $c-white;
+        @include f-base(1.4rem, .2em);
+
+        //Tab
+        @include screen-tab {
+            padding: 80px 90px 0;
+        }
+
+        //PC
+        @include screen-pc {
+            @include f-base(1.5rem, .2em);
+        }
+    }
+
+    &__txt {
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 1px solid $c-white;
+        background: $c-white;
+        
+        text-decoration: none;
+        color: $c-blue1;
+        transition: $bt-ts;
+
+        &:hover {
+            background: $c-blue1;
+            color: $c-white;
+        }
+    }
+}
