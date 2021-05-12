@@ -166,7 +166,7 @@
 
         // PC
         @include screen-pc {
-            margin-bottom: 25px;
+            margin-bottom: 40px;
             @include f-txt-pc;
         }
     }
@@ -234,6 +234,8 @@
 
     // PC
     @include screen-pc {
+        display: flex;
+        justify-content: space-between;
         padding: 125px 70px 100px 300px;
     }
 }
@@ -242,6 +244,12 @@
     padding: 25px;
     margin-bottom: 45px;
     background: $c-gray;
+    //PC
+    @include screen-pc {
+        margin-bottom: 0;
+        padding: 30px;
+        width: 48%;
+    }
 
     &__ttl {
         position: relative;
@@ -271,6 +279,11 @@
 .motto {
     padding: 25px;
     background: $c-gray;
+    //PC
+    @include screen-pc {
+        padding: 30px;
+        width: 48%;
+    }
 
     &__ttl {
         position: relative;
